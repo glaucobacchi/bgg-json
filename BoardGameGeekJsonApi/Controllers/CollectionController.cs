@@ -132,7 +132,7 @@ namespace BoardGameGeekJsonApi.Controllers
             games = games.OrderBy(g => removeArticles.Replace(g.Name.ToLower(), ""));
 
             var result = games.ToList();
-            Cache.Default.Set(Cache.CollectionKey(username, grouped, details), result, DateTimeOffset.Now.AddSeconds(15));
+            //Cache.Default.Set(Cache.CollectionKey(username, grouped, details), result, DateTimeOffset.Now.AddSeconds(15));
 
             return result;
         }
